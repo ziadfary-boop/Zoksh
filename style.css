@@ -1,0 +1,201 @@
+:root {
+  --bg-dark: #0f1113;       /* أسود فحمي للخلفية */
+  --card-bg: #1a1d21;      /* رمادي غامق جداً للكروت */
+  --text-main: #e0e0e0;    /* أبيض مطفي مريح للعين */
+  --accent-color: #00d2ff; /* أزرق نيون للتمييز */
+  --secondary: #6c757d;
+ 
+}
+
+body {
+    scroll-behavior: smooth;
+     transition: 0.5s;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* الهيدر */
+nav {
+    background: rgba(23, 26, 30, 0.8);
+    backdrop-filter: blur(10px); /* تأثير الزجاج */
+    padding: 2px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    color: var(--accent-color);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+ul {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+li:hover {
+    color: var(--accent-color);
+}
+#btn{
+    color: var(--bg-dark);
+    background-color: var(--accent-color);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+   
+}
+#btn:hover{
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    transform: translateX(5px);
+}
+
+/* السيكشن الرئيسي */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.name {
+    font-size: 40px;
+    font-weight: 800;
+    /* background: linear-gradient(to right, #fff, var(--accent-color)); */
+    color: #15b2d6;
+    /* -webkit-text-fill-color: transparent; */
+}
+
+.my-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+    object-fit: cover;
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* المهارات والمشاريع */
+h2 {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 32px;
+    color: var(--accent-color);
+}
+
+.container, #projects-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.card, .cardd {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    width: 280px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover, .cardd:hover {
+    transform: translateY(-10px);
+    background: rgba(0, 210, 255, 0.1);
+    border-color: var(--accent-color);
+}
+
+/* أزرار المشاريع */
+.cardd a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--bg-dark);
+    background-color: var(--accent-color);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.cardd a:hover {
+    box-shadow: 0 0 15px var(--accent-color);
+}
+
+/* الفوتر */
+.footer {
+    background-color: #08090a;
+    padding: 60px 0;
+    margin-top: 100px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-media a {
+    font-size: 25px;
+    color: var(--text-main);
+    margin: 0 20px;
+    transition: 0.3s;
+}
+
+.social-media a:hover {
+    color: var(--accent-color);
+}
+/* لما الـ body يكون light، غير كل حاجة جواه */
+.light-mode {
+    background-color: #fff ;
+    color: #000 ;
+}
+
+.light-mode h2, 
+.light-mode p, 
+.light-mode li, 
+.light-mode .logo {
+    color: #000;
+}
+
+.light-mode .cardd {
+    background-color: #f4f4f4; /* لون فاتح للكروت */
+    color: #000;
+}
