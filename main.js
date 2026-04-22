@@ -1,33 +1,3 @@
-async function getData(){
-    try{
-        let resposne = await fetch("https://api.github.com/users/ziad-mohammed/repos");
-        let data = await resposne.json();
-
-        console.log(data)
-    }catch(error){
-        console.log(error)
-    }
-}
-const myProjects = [
-    {
-        title: "Weather App",
-        desc: "موقع بيعرفك حالة الطقس باستخدام الـ API",
-        link: "#"
-    },
-    {
-        title: "To-Do List",
-        desc: "تطبيق بسيط لتنظيم المهام اليومية",
-        link: "#"
-    },
-    {
-        title: "Portfolio",
-        desc: "موقعي الشخصي اللي أنا شغال عليه دلوقتي",
-        link: "#"
-    }
-    
-];
-getData();
-
 let project = document.getElementById("projects-list");
 
 myProjects.forEach(pro =>{
